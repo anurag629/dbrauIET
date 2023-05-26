@@ -1,0 +1,74 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} dbrauIET {% endblock title %} 
+
+{% block content %}
+
+{% comment %} Creating 9 grid matrix with submit in each block using html and css{% endcomment %}
+
+<div class="container container_ss">
+  <div class="row">
+    {% comment %} First row {% endcomment %}
+    <div class="col">
+      <button type="submit" name="button" value="1">1</button>
+    </div>
+    <div class="col">
+      <button type="submit" name="button" value="2">2</button>
+    </div>
+    <div class="col">
+      <button type="submit" name="button" value="3">3</button>
+    </div>
+    {% comment %} Second row {% endcomment %}
+    <div class="w-100"></div>
+    <div class="col">
+      <button type="submit" name="button" value="4">4</button>
+    </div>
+    <div class="col">
+      <button type="submit" name="button" value="5">5</button>
+    </div>
+    <div class="col">
+      <button type="submit" name="button" value="6">6</button>
+    </div>
+    {% comment %} Third row {% endcomment %}
+    <div class="w-100"></div>
+    <div class="col">
+      <button type="submit" name="button" value="7">7</button>
+    </div>
+    <div class="col">
+      <button type="submit" name="button" value="8">8</button>
+    </div>
+    <div class="col">
+      <button type="submit" name="button" value="9">9</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  {% comment %} Adding margin and making each block in square shape{% endcomment %}
+  .container_ss{
+    margin-top: 10%;
+  }
+  .col{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin: 10px;
+  }
+
+  {% comment %} Also making content in middle of each box and adding submit buttion in each block {% endcomment %}
+
+  .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .col button{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+</style>
+{% endblock content %}
